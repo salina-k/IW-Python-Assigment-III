@@ -1,0 +1,4 @@
+name,roll,course,is_graduated,fee_paid
+Salina,1,Python,False,10000
+Sushmita,2,OOP,True,20000
+Oppo,3,Django,True,20000
