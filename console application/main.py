@@ -34,12 +34,10 @@ def show_courses(filename):
 
 
 def register(filename):
-    with open('players.csv', 'w', newline='') as file:
+    with open('students_info.csv', 'w', newline='') as file:
         fieldnames = ['name', 'roll', 'course', 'is_graduated', 'fee']
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
-        writer.writerow({'name': 'Salina', 'roll': 1, 'course': 'Python', 'is_graduated': 'No', 'fee': 10000})
-        writer.writerow({'name': 'Sushmita', 'roll': 2, 'course': 'OOP', 'is_graduated': 'Yes', 'fee': 20000})
         print("Thank you for registering!")
 
 
@@ -70,9 +68,6 @@ def update_info(filename, roll, change_column, value):
                                  'is_graduated': row['is_graduated'], 'fee_paid': row["fee_paid"]})
         shutil.move(tempfile.name, filename)
         print("!!!Successfully updated information!!!!")
-
-
-names = []
 
 
 def remove_info(filename, roll_no):
